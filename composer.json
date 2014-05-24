@@ -1,0 +1,20 @@
+{
+    "name": "ebildude123/tpb-php",
+    "description": "ThePirateBay wrapper class for PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Weidi Zhang",
+            "email": "weidiz999@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "TPB\\": "src/"
+        }
+    }
+}
