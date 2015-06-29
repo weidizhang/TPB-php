@@ -117,9 +117,11 @@ class API
 			$info = explode(", ", $rMatches[1]);
 			$uploaded = strtr($info[0], array("Uploaded " => "", "&nbsp;" => "-"));
 			$uplCheck = explode("-", $uploaded);
-			if (strpos($uplCheck[2], ":") !== false) {
-				$uploaded = $uplCheck[0] . "-" . $uplCheck[1] . "-" . date("Y");
-			}
+			if (isset($uplCheck[2])) {
+				if (strpos($uplCheck[2], ":") !== false) {
+					$uploaded = $uplCheck[0] . "-" . $uplCheck[1] . "-" . date("Y");
+				}
+			fi
 			$size = strtr($info[1], array("Size " => "", "&nbsp;" => " "));
 			$uploadedBy = strip_tags(str_replace("ULed by ", "", $info[2]));
 			
